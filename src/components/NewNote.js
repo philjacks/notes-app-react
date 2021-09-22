@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 const NewNote = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [author, setAuthor] = useState("phil");
+  const [author, setAuthor] = useState("Phil Jacks");
   const [isAdding, setIsAdding] = useState(false);
   const history = useHistory();
 
@@ -15,7 +15,7 @@ const NewNote = () => {
     setIsAdding(true);
 
     fetch(
-      "https://my-json-server.typicode.com/philjacks/notes-json-dummy-data/notes",
+      "http://localhost:8000/notes",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

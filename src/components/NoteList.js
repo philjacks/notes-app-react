@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const NoteList = ({ notes, title, handleDelete }) => {
+const NoteList = ({ notes, title }) => {
   return (
     <div className="note-list">
       <h1>{title}</h1>

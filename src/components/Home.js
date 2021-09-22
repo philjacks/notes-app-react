@@ -3,7 +3,7 @@ import NoteList from "./NoteList";
 
 const Home = () => {
   const { data: notes, isLoading, error } = useFetch(
-    "https://my-json-server.typicode.com/philjacks/notes-json-dummy-data/notes"
+    "http://localhost:8000/notes"
   );
 
   return (

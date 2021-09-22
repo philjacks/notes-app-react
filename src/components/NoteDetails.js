@@ -4,13 +4,13 @@ import useFetch from "../custom-hooks/useFetch";
 const NoteDetails = () => {
   const { id } = useParams();
   const { data: note, isLoading, error } = useFetch(
-    `https://my-json-server.typicode.com/philjacks/notes-json-dummy-data/notes/${id}`
+    `http://localhost:8000/notes/${id}`
   );
   const history = useHistory();
 
   const handleClick = () => {
     fetch(
-      `https://my-json-server.typicode.com/philjacks/notes-json-dummy-data/notes/${note.id}`,
+      `http://localhost:8000/notes/${note.id}`,
       {
         method: "DELETE"
       }
